@@ -1,0 +1,35 @@
+1.) What does the replace = argument of the sample( ) function do?
+
+      The replace = arguement of the sample() function, in this case it is TRUE, basically just tells R how to "randomize" the data. For instance, if replace = FALSE then all possible elements will occur. Whereas if replace = TRUE, one element can occur several times while another may not occur at all. Fior example, a sample size of 3 with possible elements 1,3, and 4 an replace = FALSE could return 3 1 4, while a replace = TRUE could return 1 1 3.
+
+2.) Using as(MyMatrix,"numeric") will not convert MyMatrix to a numeric data! Can you use another property of logicals other than as( ) that will convert the logicals of MyMatrix to 0's and 1's?
+      
+      Using the function as.numeric(), so as.numeric(MyMatrix), will convert all the values to 0's and 1's. 
+
+3.) If you wanted to check if all the elements in each row are true, how would you do this?
+
+      One way to check if all the elements in a row are true is by using the apply() and all() functions. In this case, I used apply(MyMatrix,1,all) with MyMatrix still consisting of a matrix of logicals (not numerics), 1 represents the dimension (1 = rows), and all that searches for TRUE being in the entire set given to search (by row in MyMatrix). This returns FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE, or eight FALSE's which is consistant with eight rows, so no rows' elements are all TRUE. 
+      
+4.) How many times does the number 7 occur in MyMatrix?
+
+      The number 7 occurs nine times in MyMatrix. There are two ways to find this. First I used MyMatrix[which(MyMatrix==7) to find every instance of 7 in the matrix, this retuned 7 7 7 7 7 7 7 7 7. The second way is lazier in that I didn't have to count all the 7's, I used sum(MyMatrix==7) which returned 9. 
+
+5.) How do you find the sum of each column?
+
+      To find the sum of each column, use apply(MyMatrix,2,sum) which returns 46 35 32 50 45 61 38 47 38 39 57 50.
+
+6.) How do you find the product of each column?
+
+      To find the product of each column, use apply(MyMatrix,2,prod) which returns 100000    9600    6804  840000  241920 7741440   12600  403200   70000   38880 4408992 1008000.
+
+7.) How can you change every instance of the number 1 to 11?
+
+      To change every instance of 1 to 11, use MyMatrix[which(MyMatrix==1)]<-11
+
+8.) How many values in MyMatrix are greater than 3 and less than 8?
+
+      After converting all the 11's back into 1's, use sum(MyMatrix>3 & MyMatrix<8) to find how many values are greater than 3 and less than 8. This returns 34, so 34 values are greater than 3 and less than 8.
+
+9.) How can you change the elements of column 12 into character data, while keeping columns 1-11 as numeric data?
+
+10.) Find which rows of MyMatrix have a sum >70. Make a new version of MyMatrix where the 13th column is a set of TRUE and FALSE values denoting which rows have a sum >70. (Hint: What type of object allows you to store both logical and numeric data at once?)
