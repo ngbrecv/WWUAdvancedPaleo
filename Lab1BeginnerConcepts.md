@@ -42,3 +42,5 @@
       There are no times when the beaver's temperature is lower than 36.30 degrees. I found out by searching the entire temperature     column of beaver1 for any value that was under 36.3, so any(beaver1[,"temp"]<36.3 which returned FALSE.
 
 10.) Take the sum of all elements in the column temp in the beaver1 dataset and call this value ValueA. Take the sume of all elements in the row Valiant in the mtcars dataset and call this value ValueB. Take the sum of the first 7 elements of the islands dataset and call this value ValueC. Divide ValueC by ValueB and add ValueA. What is your final answer? Show your code.
+
+      First I made valueA and valueB by taking a chunk out of the larger information so it'd be easier to work with. I'm sure there's a way to do this all in one go. For valueA, I started with valueAall<-apply(beaver1,2,sum) then valueA<-valueAall["temp"]. For valueB, I started with valueBall<-apply(mtcars, 1, sum) then valueB<-valueBall["Valiant"]. Lastly for valueC, I used valueC<-sum(islands[1:7]). For the final value I used the following: endValue<-(valueC/valueB)+valueA which returned 4298.739.
