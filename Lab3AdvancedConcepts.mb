@@ -30,6 +30,7 @@ irismath<-function(iris,row){
 4.) Load the mtcars dataset. Write a function that takes the number of cylinders as its argument. Have the function return the average miles per gallon (column mpg) for all cars with that number of cylinders (column cyl).
 
       Below is the code I used to do what was asked. Since there were only three options of cylinder size, 4, 6, and 8, I just copied the same formatting for each. After selecting the cylinder size, the rows in which have those cylinders are selected. Then the sum of the mpg column for those rows are calculated and the length (or how many) of the rows is recorded. Lastly it does the math to find the average. Additionally, if a number is imputed that is not 4, 6, or 8, the return will be the statement "invalid"
+      
 mtcarsCylinders<-function(cyls){
   if(cyls==4){
     cyl<-which(mtcars[,2]==4)
@@ -57,3 +58,9 @@ mtcarsCylinders<-function(cyls){
 5.) Write a function that simulates 1,000,000 PowerBall drawings. A PowerBall drawing takes a randome sample of five numbers (without replacement) from 1-69, plus one powerball number ranging from 1-26. The function should return a single object recording all of your draws.
 
 6.) Write a function that takes a single set of lottery numbers (as a vector) as its argument. As before, write a function that simulates 1,000,000 PowerBall drawings. Have the function return a TRUE or FALSE value indicating if you won any of the drawings.
+
+To create a random power ball number, 
+basefive<-sample(1:69,5,replace = FALSE)
+powernumber<-sample(1:26,1,replace = FALSE)
+powerball<-c(basefive,powernumber)
+
