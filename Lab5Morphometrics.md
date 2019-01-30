@@ -61,4 +61,5 @@ The following code was used to plot PC1 and PC8:
 fishPCA <- plotTangentSpace(fishGPA$coords, axis1 = 1, axis2 = 8, label = TRUE)
 
 ![PCA2](https://github.com/ngbrecv/WWUAdvancedPaleo/blob/master/Rplot02.png)
+
 The PCA graph above shows the compairson of PC1 to PC8. The dots all seem to be around the horizontal line because PC8 didn't have very much variance, especially compaired to PC1. 
