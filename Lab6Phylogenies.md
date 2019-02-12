@@ -34,5 +34,66 @@ Some species had different sizes but similar characteristics otherwise. Since yo
 
 Sexual dimorphism is typically seen when half of a specimen set of species is different than the other half but both retain very similar characteristics, this can take the form of size or exaggerated characteristics. Different thickness, or W measurements, could represent sexual dimorphism along with ridge presence. In this data set, the presence of more defined ridge detail on half the set and more smoothness on the other half (see  species D). Size difference in half the set can also represent sexual dimorphism since males are typically larger than females (see species E).
 
-PART 2
+PART 2, SECTION 1
 
+1.) Each element of the plethodon list has a name. What are they?
+
+The five elements of the plethodon list are land, links, species, site, and outline. 
+
+2.) What class is each object?
+
+The class for land, links, and outline is double. The class for species and site is factor.
+
+3.) Whare are the dimensions of the first object in the plethodon list?
+
+The dimensions of the first object in the plethodon list, land, is located after the type (double) and is 12x2xx40.
+
+PART 2, SECTION 2
+
+1.) Use the hummingbird dataset. Which object in the list records the landmark data?
+
+The first object in the list records the landmark data.
+
+2.) Perform a procrustes on the landmark data.
+3.) Perform a PCA on the hummingbird data.
+4.) How many "species" of hummingbird are there?
+
+There are 42 "species". 
+
+PART 3
+
+1.) What is the synapomorphy of the clade containing species D and E?
+
+Fangs longer than 6 inches are the synapomorphy of the clade containing D and E.
+
+2.) What is a plesiomorphic character of that clade?
+
+Sulfurous odor is the plesiomorphic character of the clade containing D and E.
+
+3.) What is the synapomorphy of the clade containing species A and B?
+
+Adorable eyelashes is the synapomorphy of the clade containing A and B.
+
+4.) Which taxa have a sulfurous odor?
+
+The taxa of species C, D, and E have a sulfurous odor.
+
+5.) What character distinguishes species D from species E?
+
+The laser death ray characteristic distinguishes D from E.
+
+6.) Are adorable eyelashes a synapomorphy or an autapomorphy?
+
+Adorable eyelashes are a synapomorphy because it contains more than one species.
+
+7.) Traditionally, the five taxa are grouped into three families. Determine if each family is monophyletic, paraphyletic, or polyphyletic.
+
+Families 1 and 3 are monophyletic and family 2 is polyphyletic.
+
+8.) More recently, species A has been grouped in a family with species D and E. Is this advisable? Why or why not?
+
+This isn't advisable because there are no given traits that species A share with species D and E. They are also very distinct on the phylogenic tree. 
+
+9.) Determine if the following groups are monophyletic, paraphyletic, or polyphyletic.
+
+Groups 1 and 5 are polyphyletic, groups 2 and 4 are monophyletic, and group 3 is paraphyletic.
