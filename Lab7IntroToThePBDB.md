@@ -106,7 +106,7 @@ PART 4
  
 2.) Download the data from the URL above into R. What are its dimensions?
 
-  The data frame from the URL has 14 dimensions (columns) and 70 entries (rows).
+  The data frame from the URL has  two dimensions, 14 variables (columns) and 70 observations (rows).
 
 3.) Did the above call use the occurrences, collections, references, opinions, or specimens route?
 
