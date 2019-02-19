@@ -99,28 +99,36 @@ PART 4
  
 1.) In your morphometrics lab, you downloaded a csv file of ammonite sizes from a GitHub URL directly into R. What code would you use to download the following PBDB data directly into R?
  
+  URL<-"https://paleobiodb.org/data1.2/colls/list.csv?base_name=Mammut&interval=Pliocene"
+
+  Then to make it visible,
+  RData<-read.cvs(URL)
  
 2.) Download the data from the URL above into R. What are its dimensions?
 
-
+  The data frame from the URL has 14 dimensions (columns) and 70 entries (rows).
 
 3.) Did the above call use the occurrences, collections, references, opinions, or specimens route?
 
-
+  The call uses the collections route.
 
 4.) What genus is being called for? What is its colloquial name? What age was the call limited to?
 
-
+  The genus mammut is being called for, this genus inclueds mammals. The call is limited to the Pliocene. 
 
 5.) Look through the service doumentation for the appropriate route (based on your answer to Question 2). Find out how to extend the age search range from the Miocene Epoch through the Pleistocene Epoch. Give the new data query URL.
 
-
+  https://paleobiodb.org/data1.2/colls/list.csv?base_name=Mammut&interval=Miocene,Pleistocene
 
 6.) What URL would you use to show the paleocoordinates (i.e., paleolatitude and paleolongitude) of each data point?
 
-
+  https://paleobiodb.org/data1.2/colls/list.csv?base_name=Mammut&interval=Miocene,Pleistocene&show=paleoloc
+    
 
 PART 5
 
 1.) Write an R function that will take a taxonomic name (as a character string) and an interval (as a character string) as its argument, and will download all fossil occurrences in R. See above.
 
+Following the Mammut and Pliocene trend, to search and download these parameters directly from the PBDB to R would be,
+
+MammutData<-downloadPBDB(taxon="Mammut",interval="Pliocene")
