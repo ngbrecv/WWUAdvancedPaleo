@@ -2,11 +2,42 @@ PROBLEM SET 1
 
 1.) How many genera are in the Miocene, Early Jurassic, Late Cretaceous, and Pennsylvanian epochs (not total, but in each epoch)? What code did you use to find out?
 
+First I broke up the PresencePBDB data into just data for the Miocene, Early Jurrasic, Late Cretaceous, and Pennsylvanian.
 
+> Mio<-PresencePBDB["Miocene",]
+> EJur<-PresencePBDB["Early Jurassic",]
+> LCre<-PresencePBDB["Late Cretaceous",]
+> Penn<-PresencePBDB["Pennsylvanian",]
+
+Next I used the sum() function to count all the inputs that are equal to 1 to find how many genera there are in each epoch.
+
+> sum(Mio==1)
+[1] 653
+> sum(EJur==1)
+[1] 177
+> sum(LCre==1)
+[1] 396
+> sum(Penn==1)
+[1] 121
+
+So, there are 653 genera in the Miocene, 177 in the Early Jurassic, 396 in the Late Cretaceous, and 121 in the Pennsylvanian
 
 2.) How many geologic epochs are included in this dataset? What code did you use to find out?
 
+First I isolated the column of epochs to work with less data,
 
+> Epochs<-PresencePBDB[,1]
+
+Then I made all values equal 1 since some were 0 and for my purpose that wasn't necessary,
+
+> Epochs[which(Epochs==0)]<-1
+
+Lastly I summed all the values which would be the ammount of epochs,
+
+> sum(Epochs)
+[1] 29
+
+So, there are 29 epochs.
 
 3.) Which epochs contain specimens of the genus Mytilus (a type of mussel)? What code did you use to find out?
 
