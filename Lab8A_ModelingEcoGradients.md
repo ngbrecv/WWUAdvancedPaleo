@@ -161,4 +161,4 @@ Olig 0.27575758 0.16265060 0.20091324
 Eo   0.21428571 0.08918129 0.14202050 0.18573551           
 Pale 0.43750000 0.32075472 0.37826087 0.40625000 0.32173913
 
-Since this outputs the Jaccard distances, the number closest to 0 will be the most similar and the number closest to 1 will be the least similar. So, the most dissimilar two epochs are the Miocene and Pliocene.
+Since this outputs the Jaccard distances, the number closest to 0 will be the most similar and the number closest to 1 will be the least similar. So, the most dissimilar two epochs are the Paleocene and Pleistocene.
