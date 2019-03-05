@@ -7,22 +7,28 @@ The max_ma and min_ma represent the maximum and minumum occurance in millions of
 There are a lot of geni, too many to paste.
 > tapply(DataPBDB$max_ma, DataPBDB$genus, max)
 
-
 3.) What is the youngest age of each genus? [Hint: Use the tapply( ) and min( ) functions we've used in previous labs]. Show the code you would use to find out.
 
 > tapply(DataPBDB$min_ma, DataPBDB$genus, min)
 
 4.) Find which genus has the most occurrences in the dataset [Hint: Use the table( ) function!]. What code did you use?
 
+The Anadara genus has the most occurances, 2105 occurances.
 
+> sort.int(table(DataPBDB$genus),decreasing = TRUE)
 
 5.) What is the stratigraphic range of this taxon (i.e., your answer to question 4). Show your code.
 
+The maximum age for Anadara is 66 million years,
+> tapply(DataPBDB$max_ma, DataPBDB$genus=="Anadara", max)
 
+The minimum age for Anadara is 0 million years,
+> tapply(DataPBDB$min_ma, DataPBDB$genus=="Anadara", min)
 
 6.) Qualitatively describe what is happening in the following lines of code. A good answer should identify what the different arguments are for each function, and what they are used for.
 
 > PaleoLng <- na.omit(Lucina$paleolng)
+This function is collecting all the Lucina Paleo longatude data from the Lucina dataset and obmitting all the entries that don't have an input, or in other words are NA or have no value.
 
 > mean(sample(PaleoLng, length(PaleoLng), replace=TRUE))
 
