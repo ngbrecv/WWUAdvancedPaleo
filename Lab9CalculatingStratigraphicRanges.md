@@ -28,11 +28,12 @@ The minimum age for Anadara is 0 million years,
 6.) Qualitatively describe what is happening in the following lines of code. A good answer should identify what the different arguments are for each function, and what they are used for.
 
 > PaleoLng <- na.omit(Lucina$paleolng)
+
 This function is collecting all the Lucina Paleo longatude data from the Lucina dataset and obmitting all the entries that don't have an input, or in other words are NA or have no value.
 
 > mean(sample(PaleoLng, length(PaleoLng), replace=TRUE))
 
-
+This function is taking the Paleo longatude data from the Lucina dataset, excluding repeated numbers, and calculating the mean paleo latitud for Lucina.
 
 7.) Plot a kernel density graph of ResampledMeans. Show your code. Does the distribution look approximately Gaussian? Explain why you think it does or does not.
 
