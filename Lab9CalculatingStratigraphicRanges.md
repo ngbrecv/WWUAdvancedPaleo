@@ -108,23 +108,39 @@ Since the Pliocene ended approximately 2.58 million years ago and this confident
 
 15.) In this case, should we trust the confidence interval or a pure reading of the fossil record? Explain your reasoning.
 
-
+I think we should trust both confidence intervals and pure readings or at least compare the two because testing against two things is always better than just relying on one thing or another.
 
 16.) State one ecological reason why this assumption is unlikey to be true.
 
-
+Over time one region can change in the type of environment. For example, an inland ocean can turn into a desert. With a change in encironment comes a change in the kinds of organisms found there. So having fossils be randomly distributed thoughout many strata wouldn't correspond with a changing environment.
 
 17.) State one geological reason why this assumpiton is unlikely to be true.
 
-
+Geological events can erode, move, distroy, or alter fossils. Uplift can expose fossils, glaciers can move fossils hundereds of miles, a volcanic episode can distroy a specimen, or permineralization can help petrify remains, etc.
 
 18.) How many occurrences are in DataPBDB. How many are in ExtantData? How many occurrences were lost by limiting our anaysis to only extant bivalves?
 
+> length(DataPBDB$occurrence_no)
 
+[1] 71380
+
+> length(ExtantData$occurrence_no)
+
+[1] 62102
+
+There are 71380 occurences in DataPBDB and 62102 occurances in ExtantData. If we only limited our data to extant bivalves we'd be missing 9278 genera.
 
 19.) How many unique( ) genera were in DataPBDB and ExtantData, respectively. Using this information, what percentage of Cenozoic bivalves in the PBDB are still extant today.
 
+> length(unique(DataPBDB$genus))
 
+[1] 1095
+
+> length(unique(ExtantData$genus))
+
+[1] 548
+
+There are 1095 unique geni in DataPBDB and 548 unique geni in ExtantData. This means approximately half of Cenezoic bivalves are still extant today.
 
 20.) Find the stratigraphic range of fossil occurrences for each genus in the ExtantData dataset. If you do not remember how to do this, revisit Problem Set 1 of this lab.
 
