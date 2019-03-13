@@ -37,35 +37,74 @@ This function is taking the Paleo longatude data from the Lucina dataset, exclud
 
 7.) Plot a kernel density graph of ResampledMeans. Show your code. Does the distribution look approximately Gaussian? Explain why you think it does or does not.
 
+> plot(density(ResampledMeans))
 
+The kernel density graph, as seen below, looks to be Gaussian because it looks like a bell curve, or evenly distributed about the mean.
+https://github.com/ngbrecv/WWUAdvancedPaleo/blob/master/Problem7.png
 
 8.) Find the mean of ResampledMeans, is it similar to the mean of the original data?
 
+> MeanResampledMeans<-mean(ResampledMeans)
 
+> MeanResampledMeans
+
+[1] 24.76644
+
+> OriginalMean
+
+[1] 24.8
+
+The mean of ResampledMeans is apporoximately the same as the origional mean.
 
 9.) Sort ResampledMeans from lowest to highest. [Hint: We learned how to sort a vector in Lab 6].
 
-
+> SortResampledMeans<-sort(ResampledMeans)
 
 10.) Now that you have sorted ResampledMeans, what is the 2.5th percentile of ResampledMeans and what is the 97.5th percentile of Resampled means. If you do not know what a percentile is, or how to calculate it, you can use google. Show your code.
 
+> 0.25*1000
 
+[1] 250
+
+> SortResampledMeans[250]
+
+[1] 23.87917
+
+> 0.975*1000
+
+[1] 975
+
+> SortResampledMeans[975]
+
+[1] 27.28373
 
 11.) Incidentally, these numbers (your answer to question 5) are the lower and upper confidence interval of the mean! Qualitatively explain why this is the case.
 
+The answer to number 5 was about Anadara, not Lucina...
+Since the maximum age of Lucina is 66 million years and the minimum is 0 million years, it would make sense that the confidence interval is from 0 to 66 million years because a confidence interval in this case is the interval of time we can confidentally say that Lucina is present.
 
+12. Based on the confidence intervals given above, do you think it likely or unlikely that Lucina is still alive?
 
-12.) Based on the confidence intervals given above, do you think it likely or unlikely that Lucina is still alive?
+I'm going to assume it means Anadara instead of Lucina, in reference to the answer to number 5.
+It is likely that Anadara is still alive since the minimum of its confidence interval is 0 million years aka the present.
 
+13. Find the extinction confidence interval for the genus Dallarca. Show your code.
 
+> tapply(DataPBDB$max_ma, DataPBDB$genus=="Dallarca", max)
 
-13.) Find the extinction confidence interval for the genus Dallarca. Show your code.
+FALSE  TRUE 
+66.00 23.03 
 
+> tapply(DataPBDB$min_ma, DataPBDB$genus=="Dallarca", min)
 
+FALSE  TRUE 
+0.000 2.588 
 
-14.) A pure reading of the fossil record says that Dallarca went extinct at the end of the Pliocene Epoch. Based on its confidence interval, do you think it is possible that Dallarca is still extant (alive)?
+The confidence interval for Dallarca is from 2.588 million years to 23.03 million years
 
+14. A pure reading of the fossil record says that Dallarca went extinct at the end of the Pliocene Epoch. Based on its confidence interval, do you think it is possible that Dallarca is still extant (alive)?
 
+Since the Pliocene ended approximately 2.58 million years ago and this confident interval ends at 2.58 million years, it is unlikely that Dallarca is extant.
 
 15.) In this case, should we trust the confidence interval or a pure reading of the fossil record? Explain your reasoning.
 
