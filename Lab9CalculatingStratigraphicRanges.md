@@ -5,7 +5,7 @@ The max_ma and min_ma represent the maximum and minumum occurance in millions of
 2.) What is oldest age of each genus? [Hint: Use the tapply( ) and max( ) functions we've used in previous labs]. Show the code you would use to find out.
 
 There are a lot of geni, too many to paste.
-> tapply(DataPBDB$max_ma, DataPBDB$genus, max)
+> tapply(DataPBDB$max_ma, DataPBDB$genus, max)tap
 
 3.) What is the youngest age of each genus? [Hint: Use the tapply( ) and min( ) functions we've used in previous labs]. Show the code you would use to find out.
 
@@ -144,11 +144,18 @@ There are 1095 unique geni in DataPBDB and 548 unique geni in ExtantData. This m
 
 20.) Find the stratigraphic range of fossil occurrences for each genus in the ExtantData dataset. If you do not remember how to do this, revisit Problem Set 1 of this lab.
 
-
+> tapply(ExtantData$max_ma, ExtantData$genus, max)
+> tapply(ExtantData$min_ma, ExtantData$genus, min)
 
 21.) Using your answer to question 3, find which genera in ExtantData are not extant according to the PBDB - i.e., do not have a minimum min_age of zero. Show your code.
 
+> Dead<-tapply(ExtantData$min_ma, ExtantData$genus, min)!=0
 
+> length(which(Dead))
+
+[1] 320
+
+There are 320 genera which are not extant.
 
 22.) Calculate the confidence interval for the extinction of the following genera (careful with your spelling!): Scrobicularia, Meiocardia, Dimya, Digitaria, Cuspidaria, Arctica, Aloides, Kurtiella, Gouldia, and Acrosterigma. Show your code. What percentage of these taxa have confidence intervals indicating that the taxon might still be extant?
 
